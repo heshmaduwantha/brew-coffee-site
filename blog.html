@@ -76,7 +76,7 @@
                                     <div class="d-flex justify-content-between align-items-center mb-2"><span class="tag">Sourcing</span><small class="text-muted">Oct 2025</small></div>
                                     <h3 class="post-title h5">The Origins of Our Beans</h3>
                                     <p class="text-muted mb-3">From farm to cup: a quick look at how we choose sustainable beans for your daily brew.</p>
-                                    <button class="readmore">Read more</button>
+                                    <button class="readmore" data-bs-toggle="modal" data-bs-target="#postModal1">Read more</button>
                                 </div>
                             </article>
                         </div>
@@ -88,7 +88,7 @@
                                     <div class="d-flex justify-content-between align-items-center mb-2"><span class="tag">How-To</span><small class="text-muted">Oct 2025</small></div>
                                     <h3 class="post-title h5">Latte Art at Home</h3>
                                     <p class="text-muted mb-3">Tips from our baristas to craft simple hearts and tulips with basic tools.</p>
-                                    <button class="readmore">Read more</button>
+                                    <button class="readmore" data-bs-toggle="modal" data-bs-target="#postModal2">Read more</button>
                                 </div>
                             </article>
                         </div>
@@ -100,7 +100,7 @@
                                     <div class="d-flex justify-content-between align-items-center mb-2"><span class="tag">Spaces</span><small class="text-muted">Sep 2025</small></div>
                                     <h3 class="post-title h5">Designing Cozy Corners</h3>
                                     <p class="text-muted mb-3">How lighting, textures and warm tones create the Brew ambiance you love.</p>
-                                    <button class="readmore">Read more</button>
+                                    <button class="readmore" data-bs-toggle="modal" data-bs-target="#postModal3">Read more</button>
                                 </div>
                             </article>
                         </div>
@@ -112,7 +112,7 @@
                                     <div class="d-flex justify-content-between align-items-center mb-2"><span class="tag">Basics</span><small class="text-muted">Sep 2025</small></div>
                                     <h3 class="post-title h5">Espresso 101</h3>
                                     <p class="text-muted mb-3">Dial-in, grind size and extraction—demystified for an everyday perfect shot.</p>
-                                    <button class="readmore">Read more</button>
+                                    <button class="readmore" data-bs-toggle="modal" data-bs-target="#postModal4">Read more</button>
                                 </div>
                             </article>
                         </div>
@@ -143,6 +143,80 @@
         </div>
     </main>
 
+    <!-- Modals for posts -->
+    <div class="modal fade" id="postModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">The Origins of Our Beans</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://picsum.photos/seed/beans10/1200/700" class="img-fluid rounded mb-3" alt="The origins of our beans">
+                    <p>We partner with smallholder farms and co-ops to source sustainable, high-elevation arabica. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat, sapien nec gravida sollicitudin, arcu elit posuere risus, in aliquet nisl dui id magna.</p>
+                    <p>Curabitur volutpat, massa eu vehicula feugiat, purus risus rhoncus mauris, a elementum purus risus id velit. Suspendisse potenti. Pellentesque a magna a ipsum lacinia tincidunt.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background:#B7896C;color:#fff" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="postModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Latte Art at Home</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://picsum.photos/seed/latte10/1200/700" class="img-fluid rounded mb-3" alt="Latte art at home">
+                    <p>Start with fresh milk and a steady pour. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rhoncus sem vitae justo dignissim, ut dignissim nisl porta.</p>
+                    <p>Aliquam erat volutpat. Donec vitae fermentum arcu, sed faucibus turpis. Integer pretium diam in turpis mollis fermentum.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background:#B7896C;color:#fff" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="postModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Designing Cozy Corners</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://picsum.photos/seed/cafe10/1200/700" class="img-fluid rounded mb-3" alt="Cozy corners">
+                    <p>Warm woods, soft textiles and layered lighting make spaces inviting. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit, turpis sit amet gravida luctus, elit mi facilisis turpis, nec tempus justo lectus vitae nisi.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background:#B7896C;color:#fff" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="postModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Espresso 101</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://picsum.photos/seed/espresso10/1200/700" class="img-fluid rounded mb-3" alt="Espresso basics">
+                    <p>Grind size, dose and time are your core variables. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis dictum felis, sed efficitur turpis efficitur vitae.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background:#B7896C;color:#fff" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer (reuse) -->
     <footer class="footer pt-5" id="contact">
         <div class="container pb-4">
