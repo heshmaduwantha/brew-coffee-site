@@ -1,0 +1,207 @@
+:root {
+    /* === Primary Palette === */
+    --coffee-brown: #4A2C2A;
+    --creamy-latte: #F5F0E5;
+
+    /* === Secondary Palette === */
+    --warm-caramel: #B7896C;
+    --steamed-milk: #EBE4D5;
+
+    /* === Accent === */
+    --subtle-green: #6B8E5F;
+
+    /* === Derived Colors === */
+    --heading-font-color: var(--coffee-brown);
+    --text-font-color: #3B2A28;
+    --navbar-bg: var(--creamy-latte);
+    --navbar-font-color: var(--coffee-brown);
+    --section-bg-light: var(--steamed-milk);
+    --section-bg-dark: var(--creamy-latte);
+    --card-border-color: var(--subtle-green);
+    --card-bg-color: var(--steamed-milk);
+    --button-bg-color: var(--coffee-brown);
+    --button-hover-bg: var(--warm-caramel);
+    --link-color: var(--subtle-green);
+    --border-accent-color: var(--warm-caramel);
+}
+
+body {
+    font-family: "Hahmlet", serif;
+    background-color: var(--creamy-latte);
+    color: var(--text-font-color);
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* ====== Typography ====== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-font-color);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 55px; }
+h2 { font-size: 50px; }
+h3 { font-size: 45px; }
+h4 { font-size: 40px; }
+h5 { font-size: 35px; }
+h6 { font-size: 30px; }
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-font-color);
+}
+
+/* ====== General Layout ====== */
+.common-section-padding {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.main-heading::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 3px;
+    background-color: var(--border-accent-color);
+    margin-top: 15px;
+}
+
+/* ====== Navbar ====== */
+#top-nav {
+    background-color: var(--coffee-brown);
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--navbar-font-color);
+    font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--warm-caramel);
+}
+
+.nav-active {
+    border-bottom: 2px solid var(--warm-caramel);
+    color: var(--coffee-brown) !important;
+}
+
+/* Sticky Navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ====== Links ====== */
+.a-link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.a-link:hover {
+    color: var(--coffee-brown);
+}
+
+/* ====== Cards ====== */
+.card {
+    border: 2px solid var(--card-border-color);
+    background-color: var(--card-bg-color);
+    border-radius: 1rem;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+/* ====== Buttons ====== */
+.btn {
+    background-color: var(--button-bg-color);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-bg);
+    color: #fff;
+}
+
+/* ====== Carousel ====== */
+.carousel-caption {
+    bottom: 35%;
+    left: 10%;
+    text-align: left;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--warm-caramel);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(20%) sepia(50%) saturate(500%) hue-rotate(20deg);
+}
+
+/* ====== Footer ====== */
+footer {
+    background-color: var(--coffee-brown);
+    color: var(--creamy-latte);
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--warm-caramel);
+}
+
+footer a:hover {
+    color: var(--creamy-latte);
+}
+
+/* ====== Contact & Forms ====== */
+.contact-card {
+    background-color: var(--section-bg-light);
+    border: 1px solid var(--warm-caramel);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.form-control {
+    background-color: var(--creamy-latte);
+    border: 2px solid var(--warm-caramel);
+    color: var(--coffee-brown);
+}
+
+.form-control:focus {
+    border-color: var(--subtle-green);
+    box-shadow: none;
+}
+
+.contact-btn {
+    background-color: var(--coffee-brown);
+    color: #fff;
+}
+
+.contact-btn:hover {
+    background-color: var(--warm-caramel);
+}
+
+/* ====== Utilities ====== */
+.border-top-left { border-top-left-radius: 2rem; }
+.border-top-right { border-top-right-radius: 2rem; }
+.border-bottom-right { border-bottom-right-radius: 2rem; }
+.border-bottom-left { border-bottom-left-radius: 2rem; }

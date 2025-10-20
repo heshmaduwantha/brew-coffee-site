@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brew Coffee | Home</title>
+    <!-- Google Font: Hahmlet -->
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Site Styles -->
+    <link rel="stylesheet" href="/Users/heshanmaduwantha/Desktop/Projects/BREW/brew-coffee-site/styles/styles.css">
+    <style>
+        /* Page-specific helpers that complement styles.css without overriding brand rules */
+        :root{--coffee:#4A2C2A;--latte:#F5F0E5;--caramel:#B7896C;--milk:#EBE4D5;--green:#6B8E5F}
+        body{font-family:'Hahmlet',serif;background:var(--latte);color:var(--coffee)}
+        .section{padding:4rem 0}
+        .rounded-xl{border-radius:1.25rem}
+        .bg-latte{background:var(--latte)}
+        .bg-milk{background:var(--milk)}
+        .text-coffee{color:var(--coffee)}
+        .btn-caramel{background:var(--caramel);border-color:var(--caramel);color:#fff}
+        .btn-caramel:hover{background:#a87757;border-color:#a87757;color:#fff}
+        .gradient-warm{background:linear-gradient(180deg, rgba(183,137,108,.18), rgba(235,228,213,.6))}
+        .shadow-soft{box-shadow:0 10px 25px rgba(74,44,42,.08)}
+        /* Navbar */
+        .navbar{background:#fff9f1cc;backdrop-filter:saturate(120%) blur(6px)}
+        .navbar .nav-link{color:var(--coffee)}
+        .navbar .nav-link:hover{color:var(--caramel)}
+        /* Hero */
+        .hero-caption{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+        .hero-card{background:rgba(245,240,229,.9);padding:2rem 2.25rem}
+        .carousel-item>img{object-fit:cover;height:58vh}
+        @media (min-width:992px){.carousel-item>img{height:72vh}}
+        /* Shop grid */
+        .shop-card{transition:transform .25s ease, box-shadow .25s ease}
+        .shop-card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(74,44,42,.15)}
+        .shop-thumb{height:110px;object-fit:cover;border-radius:.75rem}
+        /* Awards & Instagram */
+        .card-border{border:1px solid rgba(74,44,42,.08)}
+        /* Footer */
+        .footer{background:var(--coffee);color:#f6efe4}
+        .footer a{color:#f6efe4;text-decoration:none}
+        .footer a:hover{color:var(--caramel)}
+        .footer .brand{font-weight:700;letter-spacing:.08em}
+    </style>
+    <link rel="icon" href="/Users/heshanmaduwantha/Desktop/Projects/BREW/brew-coffee-site/images/logo.png">
+    <meta name="description" content="Brew Coffee — cozy café aesthetics, crafted beverages and treats.">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3 shadow-soft">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="/Users/heshanmaduwantha/Desktop/Projects/BREW/brew-coffee-site/images/logo.png" alt="Brew" width="34" height="34" class="rounded-circle">
+                <span class="fw-bold text-coffee">Brew</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#franchise">Franchise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#careers">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-caramel rounded-pill px-3" href="#">Order Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="position-relative">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-0">
+                <div class="carousel-item active">
+                    <img class="w-100" src="https://picsum.photos/1600/900?random=10" alt="Brew hero 1">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="https://picsum.photos/1600/900?random=11" alt="Brew hero 2">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="https://picsum.photos/1600/900?random=12" alt="Brew hero 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+            <div class="hero-caption container">
+                <div class="hero-card rounded-xl shadow-soft text-center">
+                    <h1 class="fw-bold mb-2">Cozy Cups, Crafted Moments</h1>
+                    <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel urna euismod.</p>
+                    <a href="#shop" class="btn btn-caramel rounded-pill px-4">Shop Our Blends</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="story" class="section">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://picsum.photos/900/700?random=20" alt="Our story" class="img-fluid rounded-xl shadow-soft">
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4 p-lg-5 gradient-warm rounded-xl shadow-soft">
+                        <h2 class="fw-bold mb-3">Our Story</h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra, risus at lacinia faucibus, nibh lectus elementum arcu, et iaculis lacus lectus non ipsum. Sed at volutpat nibh. Maecenas sed arcu id nunc gravida aliquet.</p>
+                        <p class="mb-4">Etiam sit amet bibendum leo. Cras efficitur, augue in posuere ultricies, orci lorem placerat urna, vel cursus justo risus a urna.</p>
+                        <a href="#" class="btn btn-caramel rounded-pill px-4">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop With Us -->
+    <section id="shop" class="section bg-milk">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Shop with us</h2>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Coffee & Tea -->
+                <div class="col-12 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="shop-card rounded-xl p-3 gradient-warm shadow-soft h-100">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-5 col-sm-4">
+                                    <img class="shop-thumb w-100" src="https://picsum.photos/400/260?random=30" alt="Coffee & Tea">
+                                </div>
+                                <div class="col">
+                                    <h5 class="mb-1 text-coffee">Coffee &amp; Tea</h5>
+                                    <p class="mb-0 text-muted small">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Brewing Equipment -->
+                <div class="col-12 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="shop-card rounded-xl p-3 gradient-warm shadow-soft h-100">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-5 col-sm-4">
+                                    <img class="shop-thumb w-100" src="https://picsum.photos/400/260?random=31" alt="Brewing Equipment">
+                                </div>
+                                <div class="col">
+                                    <h5 class="mb-1 text-coffee">Brewing Equipment</h5>
+                                    <p class="mb-0 text-muted small">Consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Cookies & Chocolates -->
+                <div class="col-12 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="shop-card rounded-xl p-3 gradient-warm shadow-soft h-100">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-5 col-sm-4">
+                                    <img class="shop-thumb w-100" src="https://picsum.photos/400/260?random=32" alt="Cookies & Chocolates">
+                                </div>
+                                <div class="col">
+                                    <h5 class="mb-1 text-coffee">Cookies &amp; Chocolates</h5>
+                                    <p class="mb-0 text-muted small">Praesent vel urna euismod.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Merchandise -->
+                <div class="col-12 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="shop-card rounded-xl p-3 gradient-warm shadow-soft h-100">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-5 col-sm-4">
+                                    <img class="shop-thumb w-100" src="https://picsum.photos/400/260?random=33" alt="Merchandise">
+                                </div>
+                                <div class="col">
+                                    <h5 class="mb-1 text-coffee">Merchandise</h5>
+                                    <p class="mb-0 text-muted small">Cras efficitur augue in posuere.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Café Interior -->
+    <section class="section">
+        <div class="container">
+            <div id="cafeCarousel" class="carousel slide rounded-xl overflow-hidden shadow-soft" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/1400/700?random=40" class="d-block w-100" alt="Cafe 1" style="object-fit:cover;height:420px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1400/700?random=41" class="d-block w-100" alt="Cafe 2" style="object-fit:cover;height:420px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1400/700?random=42" class="d-block w-100" alt="Cafe 3" style="object-fit:cover;height:420px">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cafeCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cafeCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Instagram -->
+    <section class="section bg-milk">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card rounded-xl shadow-soft card-border h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h3 class="fw-bold mb-0">Awards & Recognition</h3>
+                                <span class="badge" style="background:var(--green);color:#fff">2025</span>
+                            </div>
+                            <div class="d-flex gap-3 align-items-start">
+                                <img src="https://picsum.photos/120/120?random=50" class="rounded" alt="Award">
+                                <div>
+                                    <h6 class="mb-1">Top Neighborhood Café</h6>
+                                    <p class="mb-2 small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta fermentum.</p>
+                                    <div class="d-flex gap-2">
+                                        <img src="https://picsum.photos/100/70?random=51" class="rounded" alt="award shot">
+                                        <img src="https://picsum.photos/100/70?random=52" class="rounded" alt="award shot">
+                                        <img src="https://picsum.photos/100/70?random=53" class="rounded" alt="award shot">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card rounded-xl shadow-soft card-border h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <h3 class="fw-bold mb-0">Instagram</h3>
+                                <a href="#" class="btn btn-sm btn-caramel rounded-pill">Go to Instagram</a>
+                            </div>
+                            <div class="row g-2 row-cols-3">
+                                <div class="col"><img src="https://picsum.photos/300/300?random=60" class="w-100 rounded" alt="insta"></div>
+                                <div class="col"><img src="https://picsum.photos/300/300?random=61" class="w-100 rounded" alt="insta"></div>
+                                <div class="col"><img src="https://picsum.photos/300/300?random=62" class="w-100 rounded" alt="insta"></div>
+                                <div class="col"><img src="https://picsum.photos/300/300?random=63" class="w-100 rounded" alt="insta"></div>
+                                <div class="col"><img src="https://picsum.photos/300/300?random=64" class="w-100 rounded" alt="insta"></div>
+                                <div class="col"><img src="https://picsum.photos/300/300?random=65" class="w-100 rounded" alt="insta"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+        <div class="container pb-4">
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="/Users/heshanmaduwantha/Desktop/Projects/BREW/brew-coffee-site/images/logo.png" width="40" height="40" class="rounded-circle" alt="Brew">
+                        <div class="brand fs-4">Brew</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="text-uppercase mb-3">Menu</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">What's new</a></li>
+                        <li><a href="#">Drinks</a></li>
+                        <li><a href="#">Food</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="text-uppercase mb-3">Get to know us</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Store locator</a></li>
+                        <li><a href="#">Investor relations</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="text-uppercase mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">Be our distributor</a></li>
+                        <li><a href="#">Franchise</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Be a barista</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="text-uppercase mb-3">Connect with us</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-light mt-3 pt-3 d-flex flex-column flex-md-row gap-2 justify-content-between small">
+                <div>Copyright © 2025 Brew. All rights reserved.</div>
+                <div>Made with ☕ in your neighborhood.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<\/html>
+
+
