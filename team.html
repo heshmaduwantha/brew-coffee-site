@@ -15,14 +15,18 @@
         .navbar .nav-link:hover{color:var(--caramel)}
         .hero{background:var(--latte)}
         .hero h1{color:var(--coffee);font-weight:700}
-        /* Team cards - circular portraits with name and designation below */
-        .member-card{position:relative;border:0;border-radius:20px;background:#fff;box-shadow:0 14px 30px rgba(0,0,0,.08);transition:transform .25s ease, box-shadow .25s ease;padding:24px;text-align:center}
-        .member-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.12)}
-        .shape{display:none}
-        .avatar{width:160px;height:160px;object-fit:cover;border-radius:50%;border:6px solid var(--latte);box-shadow:0 6px 16px rgba(0,0,0,.08);margin:0 auto}
-        .member-body{padding:14px 0 0}
-        .member-body h5{margin-bottom:4px}
-        .role{color:#6b6b6b;font-size:.9rem;text-transform:uppercase;letter-spacing:.02em}
+        /* Team cards - clean minimal design */
+        .member-card{text-align:center;padding:20px 10px;transition:transform .25s ease}
+        .member-card:hover{transform:translateY(-4px)}
+        .avatar{width:140px;height:140px;object-fit:cover;border-radius:50%;margin:0 auto 16px;border:3px solid var(--latte)}
+        .member-body h5{margin-bottom:4px;color:#2b1c14;font-weight:600}
+        .role{color:#6b6b6b;font-size:.85rem;text-transform:uppercase;letter-spacing:.02em;font-weight:500}
+        /* Coffee beans banner */
+        .coffee-banner{position:absolute;top:0;right:0;width:200px;height:200px;opacity:.15;z-index:1;pointer-events:none}
+        .coffee-banner img{width:100%;height:100%;object-fit:contain;transform:rotate(15deg)}
+        .hero{position:relative;overflow:hidden}
+        .hero::before{content:"";position:absolute;top:-50px;right:-50px;width:300px;height:300px;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="50" cy="50" r="8" fill="%234A2C2A" opacity="0.1"/><circle cx="120" cy="80" r="6" fill="%234A2C2A" opacity="0.1"/><circle cx="80" cy="120" r="7" fill="%234A2C2A" opacity="0.1"/><circle cx="150" cy="150" r="5" fill="%234A2C2A" opacity="0.1"/><circle cx="30" cy="150" r="6" fill="%234A2C2A" opacity="0.1"/><circle cx="100" cy="30" r="5" fill="%234A2C2A" opacity="0.1"/></svg>') no-repeat;background-size:contain;transform:rotate(15deg);z-index:1}
+        .hero-content{position:relative;z-index:2}
         /* Footer ensure color */
         .footer{background:#4A2C2A;color:#f6efe4}
         .footer a{color:#f6efe4;text-decoration:none}
@@ -57,7 +61,10 @@
 
     <!-- Hero -->
     <header class="hero py-5 text-center">
-        <div class="container">
+        <div class="coffee-banner">
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=400&auto=format&fit=crop" alt="Coffee beans and leaves">
+        </div>
+        <div class="container hero-content">
             <h1 class="mb-2">Our Team</h1>
             <p class="text-muted mb-0">The people behind your favorite cups — baristas, roasters, and storytellers.</p>
         </div>
@@ -66,96 +73,96 @@
     <main class="py-4 py-md-5">
         <div class="container">
             <div class="row g-4">
-                <!-- 9 members with playful shapes and dummy images -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- Row 1 - 5 members -->
+                <div class="col-6 col-md-4 col-lg-2">
                     <div class="member-card">
-                        <div class="shape"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team1/800/800" alt="Team member 1">
+                        <img class="avatar" src="https://picsum.photos/seed/team1/400/400" alt="Team member 1">
                         <div class="member-body">
                             <h5 class="mb-1">Ariana Perera</h5>
-                            <div class="role">Head of Coffee | Colombo</div>
+                            <div class="role">Head Barista</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <div class="member-card">
-                        <div class="shape shape-2"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team2/800/800" alt="Team member 2">
+                        <img class="avatar" src="https://picsum.photos/seed/team2/400/400" alt="Team member 2">
                         <div class="member-body">
                             <h5 class="mb-1">Sahan Jayasuriya</h5>
-                            <div class="role">Head of Customer Experience | Kandy</div>
+                            <div class="role">Coffee Roaster</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <div class="member-card">
-                        <div class="shape shape-3"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team3/800/800" alt="Team member 3">
+                        <img class="avatar" src="https://picsum.photos/seed/team3/400/400" alt="Team member 3">
                         <div class="member-body">
                             <h5 class="mb-1">Ravindu Senanayake</h5>
-                            <div class="role">Head of People | Galle</div>
+                            <div class="role">Store Manager</div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <div class="member-card">
-                        <div class="shape shape-4"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team4/800/800" alt="Team member 4">
+                        <img class="avatar" src="https://picsum.photos/seed/team4/400/400" alt="Team member 4">
                         <div class="member-body">
                             <h5 class="mb-1">Dinithi Fernando</h5>
-                            <div class="role">Head of Product | Colombo</div>
+                            <div class="role">Pastry Chef</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <div class="member-card">
-                        <div class="shape"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team5/800/800" alt="Team member 5">
+                        <img class="avatar" src="https://picsum.photos/seed/team5/400/400" alt="Team member 5">
                         <div class="member-body">
                             <h5 class="mb-1">Nipun Weerasinghe</h5>
-                            <div class="role">Head of Engineering | Colombo</div>
+                            <div class="role">Barista</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-4 col-lg-2">
                     <div class="member-card">
-                        <div class="shape shape-2"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team6/800/800" alt="Team member 6">
+                        <img class="avatar" src="https://picsum.photos/seed/team6/400/400" alt="Team member 6">
                         <div class="member-body">
                             <h5 class="mb-1">Zahra Iqbal</h5>
-                            <div class="role">Head of Revenue | Colombo</div>
+                            <div class="role">Barista</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- Row 2 - 4 members -->
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="member-card">
-                        <div class="shape shape-3"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team7/800/800" alt="Team member 7">
+                        <img class="avatar" src="https://picsum.photos/seed/team7/400/400" alt="Team member 7">
                         <div class="member-body">
                             <h5 class="mb-1">Ishara Madushani</h5>
-                            <div class="role">Head of Self-service & Growth | Kandy</div>
+                            <div class="role">Assistant Manager</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="member-card">
-                        <div class="shape shape-4"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team8/800/800" alt="Team member 8">
+                        <img class="avatar" src="https://picsum.photos/seed/team8/400/400" alt="Team member 8">
                         <div class="member-body">
                             <h5 class="mb-1">Kasun Perera</h5>
-                            <div class="role">Head of Operations | Colombo</div>
+                            <div class="role">Head of Operations</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div class="member-card">
-                        <div class="shape"></div>
-                        <img class="avatar" src="https://picsum.photos/seed/team9/800/800" alt="Team member 9">
+                        <img class="avatar" src="https://picsum.photos/seed/team9/400/400" alt="Team member 9">
                         <div class="member-body">
                             <h5 class="mb-1">Ashen Dias</h5>
-                            <div class="role">Head of Marketing | Colombo</div>
+                            <div class="role">Marketing Lead</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="member-card">
+                        <img class="avatar" src="https://picsum.photos/seed/team10/400/400" alt="Team member 10">
+                        <div class="member-body">
+                            <h5 class="mb-1">Tharindu Silva</h5>
+                            <div class="role">Barista</div>
                         </div>
                     </div>
                 </div>
